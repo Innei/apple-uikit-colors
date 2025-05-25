@@ -1,17 +1,9 @@
 import { build as buildCSS } from './build-css'
-import { exec } from 'child_process'
-import { promisify } from 'util'
-import path from 'path'
+
+import { buildV4 } from './build-tailwind4-css'
 
 import { generateTailwindConfig } from './generate-tailwind-config'
 
-const execAsync = promisify(exec)
-
-/**
- * 构建全部资源
- * 1. 生成CSS文件
- * 2. 生成Tailwind配置
- */
 async function build() {
   console.log('开始构建...')
 
@@ -22,6 +14,9 @@ async function build() {
   // 然后生成Tailwind配置
   console.log('2. 生成Tailwind配置...')
   await generateTailwindConfig()
+
+  console.log('3. 构建Tailwind v4 CSS...')
+  await buildV4()
 
   console.log('构建完成！')
 }

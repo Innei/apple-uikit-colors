@@ -42,6 +42,10 @@ Or macOS:
 */
 ```
 
+## For Tailwind CSS v4
+
+[Tailwind CSS v4](./TAILWIND_V4.md)
+
 ## Colors
 
 The plugin adds the following colors to your TailwindCSS configuration:
