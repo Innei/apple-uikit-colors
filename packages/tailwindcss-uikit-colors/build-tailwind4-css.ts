@@ -77,6 +77,7 @@ const buildTailwindV4CSS = async (
       )
 
       // Add light and dark variants
+
       themeColors.push(
         `  --color-${kebabKey}-light: ${colorFunction}(var(--color-${key}-light));`,
       )
@@ -85,11 +86,9 @@ const buildTailwindV4CSS = async (
       )
 
       // Add to light mode colors (actual RGB values)
-      lightModeColors.push(`    --color-${key}: ${lightRgb};`)
-      lightModeColors.push(`    --color-${key}-light: ${lightRgb};`)
 
+      lightModeColors.push(`    --color-${key}-light: ${lightRgb};`)
       // Add to dark mode colors (actual RGB values)
-      darkModeColors.push(`    --color-${key}: ${darkRgb};`)
       darkModeColors.push(`    --color-${key}-dark: ${darkRgb};`)
     } else if (lightValue) {
       const lightRgb = hexToRgb(lightValue)
@@ -103,7 +102,6 @@ const buildTailwindV4CSS = async (
         `  --color-${kebabKey}-light: ${colorFunction}(var(--color-${key}-light));`,
       )
 
-      lightModeColors.push(`    --color-${key}: ${lightRgb};`)
       lightModeColors.push(`    --color-${key}-light: ${lightRgb};`)
     } else if (darkValue) {
       const darkRgb = hexToRgb(darkValue)
@@ -117,28 +115,51 @@ const buildTailwindV4CSS = async (
         `  --color-${kebabKey}-dark: ${colorFunction}(var(--color-${key}-dark));`,
       )
 
-      darkModeColors.push(`    --color-${key}: ${darkRgb};`)
       darkModeColors.push(`    --color-${key}-dark: ${darkRgb};`)
     }
   }
 
+  // Build media query overrides for automatic light mode
+  const mediaQueryLightOverrides: string[] = []
+  for (const key of allKeys) {
+    const lightValue = allLightColors[key]
+    if (lightValue) {
+      mediaQueryLightOverrides.push(
+        `      --color-${key}: var(--color-${key}-light);`,
+      )
+    }
+  }
+
   // Build media query overrides for automatic dark mode
-  const mediaQueryOverrides: string[] = []
+  const mediaQueryDarkOverrides: string[] = []
   for (const key of allKeys) {
     const darkValue = allDarkColors[key]
     if (darkValue) {
-      mediaQueryOverrides.push(
+      mediaQueryDarkOverrides.push(
         `      --color-${key}: var(--color-${key}-dark);`,
       )
     }
   }
 
+  // Build selector overrides for manual light mode
+  const selectorLightOverrides: string[] = []
+  for (const key of allKeys) {
+    const lightValue = allLightColors[key]
+    if (lightValue) {
+      selectorLightOverrides.push(
+        `    --color-${key}: var(--color-${key}-light);`,
+      )
+    }
+  }
+
   // Build selector overrides for manual dark mode
-  const selectorOverrides: string[] = []
+  const selectorDarkOverrides: string[] = []
   for (const key of allKeys) {
     const darkValue = allDarkColors[key]
     if (darkValue) {
-      selectorOverrides.push(`    --color-${key}: var(--color-${key}-dark);`)
+      selectorDarkOverrides.push(
+        `    --color-${key}: var(--color-${key}-dark);`,
+      )
     }
   }
 
@@ -158,16 +179,28 @@ ${lightModeColors.join('\n')}
 ${darkModeColors.join('\n')}
   }
 
+  /* Light mode overrides using media query */
+  @media (prefers-color-scheme: light) {
+    :root {
+${mediaQueryLightOverrides.join('\n')}
+    }
+  }
+
   /* Dark mode overrides using media query */
   @media (prefers-color-scheme: dark) {
     :root {
-${mediaQueryOverrides.join('\n')}
+${mediaQueryDarkOverrides.join('\n')}
     }
+  }
+
+  /* Light mode overrides using data attribute */
+  [data-theme='light'] {
+${selectorLightOverrides.join('\n')}
   }
 
   /* Dark mode overrides using data attribute */
   [data-theme='dark'] {
-${selectorOverrides.join('\n')}
+${selectorDarkOverrides.join('\n')}
   }
 }
 

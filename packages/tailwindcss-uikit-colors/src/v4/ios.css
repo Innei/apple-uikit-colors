@@ -163,158 +163,136 @@
 @layer base {
   :root {
     /* Light mode colors (default) */
-    --color-red: 255 59 48;
     --color-red-light: 255 59 48;
-    --color-orange: 255 149 0;
     --color-orange-light: 255 149 0;
-    --color-yellow: 255 204 0;
     --color-yellow-light: 255 204 0;
-    --color-green: 52 199 89;
     --color-green-light: 52 199 89;
-    --color-mint: 0 199 190;
     --color-mint-light: 0 199 190;
-    --color-teal: 48 176 190;
     --color-teal-light: 48 176 190;
-    --color-cyan: 50 173 200;
     --color-cyan-light: 50 173 200;
-    --color-blue: 0 122 255;
     --color-blue-light: 0 122 255;
-    --color-indigo: 88 86 214;
     --color-indigo-light: 88 86 214;
-    --color-purple: 175 82 222;
     --color-purple-light: 175 82 222;
-    --color-pink: 255 45 85;
     --color-pink-light: 255 45 85;
-    --color-brown: 162 132 94;
     --color-brown-light: 162 132 94;
-    --color-gray: 142 142 147;
     --color-gray-light: 142 142 147;
-    --color-gray2: 172 172 178;
     --color-gray2-light: 172 172 178;
-    --color-gray3: 199 199 204;
     --color-gray3-light: 199 199 204;
-    --color-gray4: 209 209 214;
     --color-gray4-light: 209 209 214;
-    --color-gray5: 229 229 234;
     --color-gray5-light: 229 229 234;
-    --color-gray6: 242 242 247;
     --color-gray6-light: 242 242 247;
-    --color-placeholderText: 199 199 204;
     --color-placeholderText-light: 199 199 204;
-    --color-separator: 84 84 86 / 0.34;
     --color-separator-light: 84 84 86 / 0.34;
-    --color-opaqueSeparator: 198 198 200;
     --color-opaqueSeparator-light: 198 198 200;
-    --color-nonOpaqueSeparator: 84 84 86 / 0.34;
     --color-nonOpaqueSeparator-light: 84 84 86 / 0.34;
-    --color-link: 0 122 255;
     --color-link-light: 0 122 255;
-    --color-systemBackground: 255 255 255;
     --color-systemBackground-light: 255 255 255;
-    --color-secondarySystemBackground: 242 242 247;
     --color-secondarySystemBackground-light: 242 242 247;
-    --color-tertiarySystemBackground: 255 255 255;
     --color-tertiarySystemBackground-light: 255 255 255;
-    --color-systemGroupedBackground: 242 242 247;
     --color-systemGroupedBackground-light: 242 242 247;
-    --color-secondarySystemGroupedBackground: 255 255 255;
     --color-secondarySystemGroupedBackground-light: 255 255 255;
-    --color-tertiarySystemGroupedBackground: 242 242 247;
     --color-tertiarySystemGroupedBackground-light: 242 242 247;
-    --color-systemFill: 120 120 128 / 0.2;
     --color-systemFill-light: 120 120 128 / 0.2;
-    --color-secondarySystemFill: 120 120 128 / 0.16;
     --color-secondarySystemFill-light: 120 120 128 / 0.16;
-    --color-tertiarySystemFill: 120 120 128 / 0.12;
     --color-tertiarySystemFill-light: 120 120 128 / 0.12;
-    --color-quaternarySystemFill: 120 120 128 / 0.08;
     --color-quaternarySystemFill-light: 120 120 128 / 0.08;
-    --color-label: 0 0 0;
     --color-label-light: 0 0 0;
-    --color-text: 0 0 0;
     --color-text-light: 0 0 0;
-    --color-secondaryLabel: 60 60 67 / 0.6;
     --color-secondaryLabel-light: 60 60 67 / 0.6;
-    --color-tertiaryLabel: 60 60 67 / 0.3;
     --color-tertiaryLabel-light: 60 60 67 / 0.3;
-    --color-quaternaryLabel: 60 60 67 / 0.18;
     --color-quaternaryLabel-light: 60 60 67 / 0.18;
-    --color-red: 255 69 58;
     --color-red-dark: 255 69 58;
-    --color-orange: 255 175 113;
     --color-orange-dark: 255 175 113;
-    --color-yellow: 255 214 10;
     --color-yellow-dark: 255 214 10;
-    --color-green: 48 209 88;
     --color-green-dark: 48 209 88;
-    --color-mint: 99 230 226;
     --color-mint-dark: 99 230 226;
-    --color-teal: 64 200 244;
     --color-teal-dark: 64 200 244;
-    --color-cyan: 100 210 255;
     --color-cyan-dark: 100 210 255;
-    --color-blue: 10 132 255;
     --color-blue-dark: 10 132 255;
-    --color-indigo: 94 92 230;
     --color-indigo-dark: 94 92 230;
-    --color-purple: 191 90 242;
     --color-purple-dark: 191 90 242;
-    --color-pink: 255 55 95;
     --color-pink-dark: 255 55 95;
-    --color-brown: 172 142 104;
     --color-brown-dark: 172 142 104;
-    --color-gray: 142 142 147;
     --color-gray-dark: 142 142 147;
-    --color-gray2: 99 99 102;
     --color-gray2-dark: 99 99 102;
-    --color-gray3: 72 72 74;
     --color-gray3-dark: 72 72 74;
-    --color-gray4: 58 58 60;
     --color-gray4-dark: 58 58 60;
-    --color-gray5: 44 44 46;
     --color-gray5-dark: 44 44 46;
-    --color-gray6: 28 28 30;
     --color-gray6-dark: 28 28 30;
-    --color-placeholderText: 122 122 122;
     --color-placeholderText-dark: 122 122 122;
-    --color-separator: 84 84 86 / 0.6;
     --color-separator-dark: 84 84 86 / 0.6;
-    --color-opaqueSeparator: 56 56 58;
     --color-opaqueSeparator-dark: 56 56 58;
-    --color-nonOpaqueSeparator: 84 84 86 / 0.6;
     --color-nonOpaqueSeparator-dark: 84 84 86 / 0.6;
-    --color-link: 10 132 255;
     --color-link-dark: 10 132 255;
-    --color-systemBackground: 0 0 0;
     --color-systemBackground-dark: 0 0 0;
-    --color-secondarySystemBackground: 28 28 30;
     --color-secondarySystemBackground-dark: 28 28 30;
-    --color-tertiarySystemBackground: 44 44 46;
     --color-tertiarySystemBackground-dark: 44 44 46;
-    --color-systemGroupedBackground: 0 0 0;
     --color-systemGroupedBackground-dark: 0 0 0;
-    --color-secondarySystemGroupedBackground: 28 28 30;
     --color-secondarySystemGroupedBackground-dark: 28 28 30;
-    --color-tertiarySystemGroupedBackground: 44 44 46;
     --color-tertiarySystemGroupedBackground-dark: 44 44 46;
-    --color-systemFill: 120 120 128 / 0.36;
     --color-systemFill-dark: 120 120 128 / 0.36;
-    --color-secondarySystemFill: 120 120 128 / 0.32;
     --color-secondarySystemFill-dark: 120 120 128 / 0.32;
-    --color-tertiarySystemFill: 120 120 128 / 0.24;
     --color-tertiarySystemFill-dark: 120 120 128 / 0.24;
-    --color-quaternarySystemFill: 120 120 128 / 0.19;
     --color-quaternarySystemFill-dark: 120 120 128 / 0.19;
-    --color-label: 255 255 255;
     --color-label-dark: 255 255 255;
-    --color-text: 255 255 255;
     --color-text-dark: 255 255 255;
-    --color-secondaryLabel: 235 235 245 / 0.6;
     --color-secondaryLabel-dark: 235 235 245 / 0.6;
-    --color-tertiaryLabel: 235 235 245 / 0.3;
     --color-tertiaryLabel-dark: 235 235 245 / 0.3;
-    --color-quaternaryLabel: 235 235 245 / 0.18;
     --color-quaternaryLabel-dark: 235 235 245 / 0.18;
+  }
+
+  /* Light mode overrides using media query */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-red: var(--color-red-light);
+      --color-orange: var(--color-orange-light);
+      --color-yellow: var(--color-yellow-light);
+      --color-green: var(--color-green-light);
+      --color-mint: var(--color-mint-light);
+      --color-teal: var(--color-teal-light);
+      --color-cyan: var(--color-cyan-light);
+      --color-blue: var(--color-blue-light);
+      --color-indigo: var(--color-indigo-light);
+      --color-purple: var(--color-purple-light);
+      --color-pink: var(--color-pink-light);
+      --color-brown: var(--color-brown-light);
+      --color-gray: var(--color-gray-light);
+      --color-gray2: var(--color-gray2-light);
+      --color-gray3: var(--color-gray3-light);
+      --color-gray4: var(--color-gray4-light);
+      --color-gray5: var(--color-gray5-light);
+      --color-gray6: var(--color-gray6-light);
+      --color-placeholderText: var(--color-placeholderText-light);
+      --color-separator: var(--color-separator-light);
+      --color-opaqueSeparator: var(--color-opaqueSeparator-light);
+      --color-nonOpaqueSeparator: var(--color-nonOpaqueSeparator-light);
+      --color-link: var(--color-link-light);
+      --color-systemBackground: var(--color-systemBackground-light);
+      --color-secondarySystemBackground: var(
+        --color-secondarySystemBackground-light
+      );
+      --color-tertiarySystemBackground: var(
+        --color-tertiarySystemBackground-light
+      );
+      --color-systemGroupedBackground: var(
+        --color-systemGroupedBackground-light
+      );
+      --color-secondarySystemGroupedBackground: var(
+        --color-secondarySystemGroupedBackground-light
+      );
+      --color-tertiarySystemGroupedBackground: var(
+        --color-tertiarySystemGroupedBackground-light
+      );
+      --color-systemFill: var(--color-systemFill-light);
+      --color-secondarySystemFill: var(--color-secondarySystemFill-light);
+      --color-tertiarySystemFill: var(--color-tertiarySystemFill-light);
+      --color-quaternarySystemFill: var(--color-quaternarySystemFill-light);
+      --color-label: var(--color-label-light);
+      --color-text: var(--color-text-light);
+      --color-secondaryLabel: var(--color-secondaryLabel-light);
+      --color-tertiaryLabel: var(--color-tertiaryLabel-light);
+      --color-quaternaryLabel: var(--color-quaternaryLabel-light);
+    }
   }
 
   /* Dark mode overrides using media query */
@@ -369,6 +347,56 @@
       --color-tertiaryLabel: var(--color-tertiaryLabel-dark);
       --color-quaternaryLabel: var(--color-quaternaryLabel-dark);
     }
+  }
+
+  /* Light mode overrides using data attribute */
+  [data-theme="light"] {
+    --color-red: var(--color-red-light);
+    --color-orange: var(--color-orange-light);
+    --color-yellow: var(--color-yellow-light);
+    --color-green: var(--color-green-light);
+    --color-mint: var(--color-mint-light);
+    --color-teal: var(--color-teal-light);
+    --color-cyan: var(--color-cyan-light);
+    --color-blue: var(--color-blue-light);
+    --color-indigo: var(--color-indigo-light);
+    --color-purple: var(--color-purple-light);
+    --color-pink: var(--color-pink-light);
+    --color-brown: var(--color-brown-light);
+    --color-gray: var(--color-gray-light);
+    --color-gray2: var(--color-gray2-light);
+    --color-gray3: var(--color-gray3-light);
+    --color-gray4: var(--color-gray4-light);
+    --color-gray5: var(--color-gray5-light);
+    --color-gray6: var(--color-gray6-light);
+    --color-placeholderText: var(--color-placeholderText-light);
+    --color-separator: var(--color-separator-light);
+    --color-opaqueSeparator: var(--color-opaqueSeparator-light);
+    --color-nonOpaqueSeparator: var(--color-nonOpaqueSeparator-light);
+    --color-link: var(--color-link-light);
+    --color-systemBackground: var(--color-systemBackground-light);
+    --color-secondarySystemBackground: var(
+      --color-secondarySystemBackground-light
+    );
+    --color-tertiarySystemBackground: var(
+      --color-tertiarySystemBackground-light
+    );
+    --color-systemGroupedBackground: var(--color-systemGroupedBackground-light);
+    --color-secondarySystemGroupedBackground: var(
+      --color-secondarySystemGroupedBackground-light
+    );
+    --color-tertiarySystemGroupedBackground: var(
+      --color-tertiarySystemGroupedBackground-light
+    );
+    --color-systemFill: var(--color-systemFill-light);
+    --color-secondarySystemFill: var(--color-secondarySystemFill-light);
+    --color-tertiarySystemFill: var(--color-tertiarySystemFill-light);
+    --color-quaternarySystemFill: var(--color-quaternarySystemFill-light);
+    --color-label: var(--color-label-light);
+    --color-text: var(--color-text-light);
+    --color-secondaryLabel: var(--color-secondaryLabel-light);
+    --color-tertiaryLabel: var(--color-tertiaryLabel-light);
+    --color-quaternaryLabel: var(--color-quaternaryLabel-light);
   }
 
   /* Dark mode overrides using data attribute */
