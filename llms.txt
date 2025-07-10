@@ -1,0 +1,225 @@
+# Apple UIKit Colors - AI Assistant Reference
+
+> This file provides essential information for AI assistants when working with the Apple UIKit Colors library.
+
+## Library Overview
+
+Apple UIKit Colors is a comprehensive monorepo providing authentic Apple system colors for TypeScript, React Native, and Tailwind CSS with automatic light/dark mode support.
+
+## Package Structure
+
+```
+apple-uikit-colors/
+├── packages/
+│   ├── uikit-colors/           # Core colors (apple-uikit-colors)
+│   ├── react-native-uikit-colors/  # React Native hooks & utilities
+│   └── tailwindcss-uikit-colors/   # Tailwind CSS plugin
+└── docs/                       # Documentation
+```
+
+## Installation Commands
+
+```bash
+# Core TypeScript colors
+npm install apple-uikit-colors
+
+# React Native with NativeWind support
+npm install react-native-uikit-colors
+
+# Tailwind CSS plugin
+npm install tailwindcss-uikit-colors
+```
+
+## Common Usage Patterns
+
+### React Native Basic Usage
+
+```tsx
+import { useColor, useColors } from 'react-native-uikit-colors'
+
+function MyComponent() {
+  const backgroundColor = useColor('systemBackground')
+  const textColor = useColor('label')
+  
+  return (
+    <View style={{ backgroundColor }}>
+      <Text style={{ color: textColor }}>Hello World</Text>
+    </View>
+  )
+}
+```
+
+### React Native with NativeWind
+
+```tsx
+import { useCurrentColorsVariants } from 'react-native-uikit-colors'
+
+function App() {
+  const currentThemeColors = useCurrentColorsVariants()
+  
+  return (
+    <View style={currentThemeColors} className="flex-1">
+      <Text className="text-label text-lg">Native + Web</Text>
+    </View>
+  )
+}
+```
+
+### Tailwind CSS Setup
+
+```js
+// tailwind.config.js
+import { withUIKit } from 'tailwindcss-uikit-colors'
+
+export default withUIKit({
+  content: ['./src/**/*.{js,jsx,ts,tsx}']
+})
+```
+
+```css
+/* Import colors CSS */
+@import 'tailwindcss-uikit-colors/selector.css';
+```
+
+### Tailwind CSS v4
+
+```css
+/* Import v4 colors directly */
+@import 'tailwindcss-uikit-colors/v4/ios.css';
+@import 'tailwindcss-uikit-colors/v4/macos.css';
+```
+
+## Available Colors
+
+### System Colors (Most Common)
+- `system-background` - Main background color
+- `secondary-system-background` - Secondary background
+- `tertiary-system-background` - Tertiary background
+- `label` - Primary text color
+- `secondary-label` - Secondary text color
+- `tertiary-label` - Tertiary text color
+- `quaternary-label` - Quaternary text color
+- `system-fill` - Fill color for UI elements
+- `secondary-system-fill` - Secondary fill color
+- `separator` - Separator/border color
+- `link` - Link color
+- `placeholder-text` - Placeholder text color
+
+### Semantic Colors
+- `red`, `orange`, `yellow`, `green`, `mint`, `teal`, `cyan`, `blue`, `indigo`, `purple`, `pink`, `brown`
+- `gray`, `gray2`, `gray3`, `gray4`, `gray5`, `gray6`
+
+### Grouped Backgrounds
+- `system-grouped-background`
+- `secondary-system-grouped-background`
+- `tertiary-system-grouped-background`
+
+## Key React Native Hooks
+
+- `useColor(colorName)` - Returns single color as RGBA string
+- `useColors()` - Returns all colors as RGBA strings
+- `useColorsVariants()` - Returns colors as RGB space-separated values
+- `useCurrentColorsVariants()` - Returns CSS variables for NativeWind
+
+## Key Utilities
+
+- `getColor(colorName)` - Sync color getter
+- `getSystemBackgroundColor()` - Quick system background
+- `rgbStringToRgb(rgbString)` - Convert RGB to RGBA format
+
+## Common Tailwind Classes
+
+### Backgrounds
+- `bg-system-background`
+- `bg-secondary-system-background`
+- `bg-system-fill`
+
+### Text
+- `text-label`
+- `text-secondary-label`
+- `text-link`
+
+### Semantic Colors
+- `bg-red`, `text-red`, `border-red`
+- `bg-blue`, `text-blue`, `border-blue`
+- `bg-green`, `text-green`, `border-green`
+
+## Dark Mode Support
+
+Colors automatically adapt to system theme. For explicit control:
+- Light variants: `bg-red-light`, `text-label-light`
+- Dark variants: `bg-red-dark`, `text-label-dark`
+
+## Build Commands
+
+```bash
+# Build all packages
+pnpm build
+
+# Build specific package
+pnpm --filter=apple-uikit-colors run build
+pnpm --filter=react-native-uikit-colors run build
+pnpm --filter=tailwindcss-uikit-colors run build
+
+# Version bump
+pnpm bump
+```
+
+## Important Notes for AI Assistants
+
+1. **Color Format**: Colors are stored as space-separated RGB values (`"255 59 48"`)
+2. **Platform Detection**: React Native package auto-detects platform (native vs web)
+3. **Type Safety**: All color names are type-safe with TypeScript
+4. **Automatic Updates**: Colors update automatically when system theme changes
+5. **Cross-Platform**: Same color names work across React Native, web, and Tailwind CSS
+6. **NativeWind Integration**: Use `useCurrentColorsVariants()` for NativeWind projects
+7. **Web Support**: Use `useCSSInjection()` hook for React Native Web
+
+## Common Troubleshooting
+
+### React Native Setup
+- Ensure NativeWind is properly configured
+- Use `useCurrentColorsVariants()` for className styling
+- Import web hooks from `/web` entry point
+
+### Tailwind CSS Setup
+- Import CSS file after installing plugin
+- Use `withUIKit()` to extend config
+- Check dark mode configuration
+
+### Build Issues
+- Run builds in dependency order (core → tailwind → react-native)
+- Use pnpm for workspace management
+- Check TypeScript configuration
+
+## Performance Tips
+
+1. Colors are memoized in React hooks
+2. Use `useColor()` for single colors
+3. Use `useColors()` when multiple colors needed
+4. CSS variables are shared across components
+5. Tree shaking eliminates unused colors
+
+## Example Project Structures
+
+### React Native App
+```
+src/
+├── components/
+│   ├── ThemedView.tsx      # Uses useCurrentColorsVariants()
+│   └── ThemedText.tsx      # Uses useColor()
+├── screens/
+└── App.tsx                 # Root provider
+```
+
+### Next.js App
+```
+src/
+├── app/
+│   ├── globals.css         # @import 'tailwindcss-uikit-colors/selector.css'
+│   └── layout.tsx
+├── components/
+└── tailwind.config.js      # withUIKit()
+```
+
+This reference should help AI assistants provide accurate guidance when working with Apple UIKit Colors across different platforms and use cases.
