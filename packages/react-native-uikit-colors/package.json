@@ -1,6 +1,6 @@
 {
   "name": "react-native-uikit-colors",
-  "version": "0.6.2",
+  "version": "0.7.0-alpha.0",
   "description": "react native ui kit colors",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
