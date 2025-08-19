@@ -145,11 +145,11 @@ const configColors = {
   },
   brown: "rgb(var(--color-brown) / <alpha-value>)",
   gray: {
-    2: "rgba(var(--color-gray2))",
-    3: "rgba(var(--color-gray3))",
-    4: "rgba(var(--color-gray4))",
-    5: "rgba(var(--color-gray5))",
-    6: "rgba(var(--color-gray6))",
+    2: "color-mix(in srgb, rgba(var(--color-gray2)) calc(<alpha-value> * 100%), transparent)",
+    3: "color-mix(in srgb, rgba(var(--color-gray3)) calc(<alpha-value> * 100%), transparent)",
+    4: "color-mix(in srgb, rgba(var(--color-gray4)) calc(<alpha-value> * 100%), transparent)",
+    5: "color-mix(in srgb, rgba(var(--color-gray5)) calc(<alpha-value> * 100%), transparent)",
+    6: "color-mix(in srgb, rgba(var(--color-gray6)) calc(<alpha-value> * 100%), transparent)",
     50: "#f9fafb",
     100: "#f3f4f6",
     200: "#e5e7eb",
@@ -163,11 +163,15 @@ const configColors = {
     950: "#030712",
     DEFAULT: "rgb(var(--color-gray) / <alpha-value>)",
   },
-  fill: "rgba(var(--color-fill))",
-  "fill-secondary": "rgba(var(--color-fillSecondary))",
-  "fill-tertiary": "rgba(var(--color-fillTertiary))",
-  "fill-quaternary": "rgba(var(--color-fillQuaternary))",
-  "fill-quinary": "rgba(var(--color-fillQuinary))",
+  fill: "color-mix(in srgb, rgba(var(--color-fill)) calc(<alpha-value> * 100%), transparent)",
+  "fill-secondary":
+    "color-mix(in srgb, rgba(var(--color-fillSecondary)) calc(<alpha-value> * 100%), transparent)",
+  "fill-tertiary":
+    "color-mix(in srgb, rgba(var(--color-fillTertiary)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quaternary":
+    "color-mix(in srgb, rgba(var(--color-fillQuaternary)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quinary":
+    "color-mix(in srgb, rgba(var(--color-fillQuinary)) calc(<alpha-value> * 100%), transparent)",
   "fill-vibrant": "rgb(var(--color-fillVibrant) / <alpha-value>)",
   "fill-vibrant-secondary":
     "rgb(var(--color-fillVibrantSecondary) / <alpha-value>)",
@@ -177,11 +181,15 @@ const configColors = {
     "rgb(var(--color-fillVibrantQuaternary) / <alpha-value>)",
   "fill-vibrant-quinary":
     "rgb(var(--color-fillVibrantQuinary) / <alpha-value>)",
-  text: "rgba(var(--color-text))",
-  "text-secondary": "rgba(var(--color-textSecondary))",
-  "text-tertiary": "rgba(var(--color-textTertiary))",
-  "text-quaternary": "rgba(var(--color-textQuaternary))",
-  "text-quinary": "rgba(var(--color-textQuinary))",
+  text: "color-mix(in srgb, rgba(var(--color-text)) calc(<alpha-value> * 100%), transparent)",
+  "text-secondary":
+    "color-mix(in srgb, rgba(var(--color-textSecondary)) calc(<alpha-value> * 100%), transparent)",
+  "text-tertiary":
+    "color-mix(in srgb, rgba(var(--color-textTertiary)) calc(<alpha-value> * 100%), transparent)",
+  "text-quaternary":
+    "color-mix(in srgb, rgba(var(--color-textQuaternary)) calc(<alpha-value> * 100%), transparent)",
+  "text-quinary":
+    "color-mix(in srgb, rgba(var(--color-textQuinary)) calc(<alpha-value> * 100%), transparent)",
   "text-vibrant": "rgb(var(--color-textVibrant) / <alpha-value>)",
   "text-vibrant-secondary":
     "rgb(var(--color-textVibrantSecondary) / <alpha-value>)",
@@ -191,26 +199,40 @@ const configColors = {
     "rgb(var(--color-textVibrantQuaternary) / <alpha-value>)",
   "text-vibrant-quinary":
     "rgb(var(--color-textVibrantQuinary) / <alpha-value>)",
-  "material-ultra-thick": "rgba(var(--color-materialUltraThick))",
-  "material-thick": "rgba(var(--color-materialThick))",
-  "material-medium": "rgba(var(--color-materialMedium))",
-  "material-thin": "rgba(var(--color-materialThin))",
-  "material-ultra-thin": "rgba(var(--color-materialUltraThin))",
+  "material-ultra-thick":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThick)) calc(<alpha-value> * 100%), transparent)",
+  "material-thick":
+    "color-mix(in srgb, rgba(var(--color-materialThick)) calc(<alpha-value> * 100%), transparent)",
+  "material-medium":
+    "color-mix(in srgb, rgba(var(--color-materialMedium)) calc(<alpha-value> * 100%), transparent)",
+  "material-thin":
+    "color-mix(in srgb, rgba(var(--color-materialThin)) calc(<alpha-value> * 100%), transparent)",
+  "material-ultra-thin":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThin)) calc(<alpha-value> * 100%), transparent)",
   "material-opaque": "rgb(var(--color-materialOpaque) / <alpha-value>)",
   "control-enabled": "rgb(var(--color-controlEnabled) / <alpha-value>)",
   "control-disabled": "rgb(var(--color-controlDisabled) / <alpha-value>)",
-  menu: "rgba(var(--color-menu))",
-  popover: "rgba(var(--color-popover))",
-  titlebar: "rgba(var(--color-titlebar))",
-  sidebar: "rgba(var(--color-sidebar))",
-  "selection-focused": "rgba(var(--color-selectionFocused))",
+  menu: "color-mix(in srgb, rgba(var(--color-menu)) calc(<alpha-value> * 100%), transparent)",
+  popover:
+    "color-mix(in srgb, rgba(var(--color-popover)) calc(<alpha-value> * 100%), transparent)",
+  titlebar:
+    "color-mix(in srgb, rgba(var(--color-titlebar)) calc(<alpha-value> * 100%), transparent)",
+  sidebar:
+    "color-mix(in srgb, rgba(var(--color-sidebar)) calc(<alpha-value> * 100%), transparent)",
+  "selection-focused":
+    "color-mix(in srgb, rgba(var(--color-selectionFocused)) calc(<alpha-value> * 100%), transparent)",
   "selection-focused-fill":
     "rgb(var(--color-selectionFocusedFill) / <alpha-value>)",
-  "selection-unfocused": "rgba(var(--color-selectionUnfocused))",
-  "selection-unfocused-fill": "rgba(var(--color-selectionUnfocusedFill))",
-  "header-view": "rgba(var(--color-headerView))",
-  tooltip: "rgba(var(--color-tooltip))",
-  "under-window-background": "rgba(var(--color-underWindowBackground))",
+  "selection-unfocused":
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocused)) calc(<alpha-value> * 100%), transparent)",
+  "selection-unfocused-fill":
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocusedFill)) calc(<alpha-value> * 100%), transparent)",
+  "header-view":
+    "color-mix(in srgb, rgba(var(--color-headerView)) calc(<alpha-value> * 100%), transparent)",
+  tooltip:
+    "color-mix(in srgb, rgba(var(--color-tooltip)) calc(<alpha-value> * 100%), transparent)",
+  "under-window-background":
+    "color-mix(in srgb, rgba(var(--color-underWindowBackground)) calc(<alpha-value> * 100%), transparent)",
   "red-light": "rgb(var(--color-red-light) / <alpha-value>)",
   "orange-light": "rgb(var(--color-orange-light) / <alpha-value>)",
   "yellow-light": "rgb(var(--color-yellow-light) / <alpha-value>)",
@@ -224,11 +246,16 @@ const configColors = {
   "pink-light": "rgb(var(--color-pink-light) / <alpha-value>)",
   "brown-light": "rgb(var(--color-brown-light) / <alpha-value>)",
   "gray-light": "rgb(var(--color-gray-light) / <alpha-value>)",
-  "fill-light": "rgba(var(--color-fill-light))",
-  "fill-secondary-light": "rgba(var(--color-fillSecondary-light))",
-  "fill-tertiary-light": "rgba(var(--color-fillTertiary-light))",
-  "fill-quaternary-light": "rgba(var(--color-fillQuaternary-light))",
-  "fill-quinary-light": "rgba(var(--color-fillQuinary-light))",
+  "fill-light":
+    "color-mix(in srgb, rgba(var(--color-fill-light)) calc(<alpha-value> * 100%), transparent)",
+  "fill-secondary-light":
+    "color-mix(in srgb, rgba(var(--color-fillSecondary-light)) calc(<alpha-value> * 100%), transparent)",
+  "fill-tertiary-light":
+    "color-mix(in srgb, rgba(var(--color-fillTertiary-light)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quaternary-light":
+    "color-mix(in srgb, rgba(var(--color-fillQuaternary-light)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quinary-light":
+    "color-mix(in srgb, rgba(var(--color-fillQuinary-light)) calc(<alpha-value> * 100%), transparent)",
   "fill-vibrant-light": "rgb(var(--color-fillVibrant-light) / <alpha-value>)",
   "fill-vibrant-secondary-light":
     "rgb(var(--color-fillVibrantSecondary-light) / <alpha-value>)",
@@ -238,11 +265,16 @@ const configColors = {
     "rgb(var(--color-fillVibrantQuaternary-light) / <alpha-value>)",
   "fill-vibrant-quinary-light":
     "rgb(var(--color-fillVibrantQuinary-light) / <alpha-value>)",
-  "text-light": "rgba(var(--color-text-light))",
-  "text-secondary-light": "rgba(var(--color-textSecondary-light))",
-  "text-tertiary-light": "rgba(var(--color-textTertiary-light))",
-  "text-quaternary-light": "rgba(var(--color-textQuaternary-light))",
-  "text-quinary-light": "rgba(var(--color-textQuinary-light))",
+  "text-light":
+    "color-mix(in srgb, rgba(var(--color-text-light)) calc(<alpha-value> * 100%), transparent)",
+  "text-secondary-light":
+    "color-mix(in srgb, rgba(var(--color-textSecondary-light)) calc(<alpha-value> * 100%), transparent)",
+  "text-tertiary-light":
+    "color-mix(in srgb, rgba(var(--color-textTertiary-light)) calc(<alpha-value> * 100%), transparent)",
+  "text-quaternary-light":
+    "color-mix(in srgb, rgba(var(--color-textQuaternary-light)) calc(<alpha-value> * 100%), transparent)",
+  "text-quinary-light":
+    "color-mix(in srgb, rgba(var(--color-textQuinary-light)) calc(<alpha-value> * 100%), transparent)",
   "text-vibrant-light": "rgb(var(--color-textVibrant-light) / <alpha-value>)",
   "text-vibrant-secondary-light":
     "rgb(var(--color-textVibrantSecondary-light) / <alpha-value>)",
@@ -252,31 +284,44 @@ const configColors = {
     "rgb(var(--color-textVibrantQuaternary-light) / <alpha-value>)",
   "text-vibrant-quinary-light":
     "rgb(var(--color-textVibrantQuinary-light) / <alpha-value>)",
-  "material-ultra-thick-light": "rgba(var(--color-materialUltraThick-light))",
-  "material-thick-light": "rgba(var(--color-materialThick-light))",
-  "material-medium-light": "rgba(var(--color-materialMedium-light))",
-  "material-thin-light": "rgba(var(--color-materialThin-light))",
-  "material-ultra-thin-light": "rgba(var(--color-materialUltraThin-light))",
+  "material-ultra-thick-light":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThick-light)) calc(<alpha-value> * 100%), transparent)",
+  "material-thick-light":
+    "color-mix(in srgb, rgba(var(--color-materialThick-light)) calc(<alpha-value> * 100%), transparent)",
+  "material-medium-light":
+    "color-mix(in srgb, rgba(var(--color-materialMedium-light)) calc(<alpha-value> * 100%), transparent)",
+  "material-thin-light":
+    "color-mix(in srgb, rgba(var(--color-materialThin-light)) calc(<alpha-value> * 100%), transparent)",
+  "material-ultra-thin-light":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThin-light)) calc(<alpha-value> * 100%), transparent)",
   "material-opaque-light":
     "rgb(var(--color-materialOpaque-light) / <alpha-value>)",
   "control-enabled-light":
     "rgb(var(--color-controlEnabled-light) / <alpha-value>)",
   "control-disabled-light":
     "rgb(var(--color-controlDisabled-light) / <alpha-value>)",
-  "menu-light": "rgba(var(--color-menu-light))",
-  "popover-light": "rgba(var(--color-popover-light))",
-  "titlebar-light": "rgba(var(--color-titlebar-light))",
-  "sidebar-light": "rgba(var(--color-sidebar-light))",
-  "selection-focused-light": "rgba(var(--color-selectionFocused-light))",
+  "menu-light":
+    "color-mix(in srgb, rgba(var(--color-menu-light)) calc(<alpha-value> * 100%), transparent)",
+  "popover-light":
+    "color-mix(in srgb, rgba(var(--color-popover-light)) calc(<alpha-value> * 100%), transparent)",
+  "titlebar-light":
+    "color-mix(in srgb, rgba(var(--color-titlebar-light)) calc(<alpha-value> * 100%), transparent)",
+  "sidebar-light":
+    "color-mix(in srgb, rgba(var(--color-sidebar-light)) calc(<alpha-value> * 100%), transparent)",
+  "selection-focused-light":
+    "color-mix(in srgb, rgba(var(--color-selectionFocused-light)) calc(<alpha-value> * 100%), transparent)",
   "selection-focused-fill-light":
     "rgb(var(--color-selectionFocusedFill-light) / <alpha-value>)",
-  "selection-unfocused-light": "rgba(var(--color-selectionUnfocused-light))",
+  "selection-unfocused-light":
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocused-light)) calc(<alpha-value> * 100%), transparent)",
   "selection-unfocused-fill-light":
-    "rgba(var(--color-selectionUnfocusedFill-light))",
-  "header-view-light": "rgba(var(--color-headerView-light))",
-  "tooltip-light": "rgba(var(--color-tooltip-light))",
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocusedFill-light)) calc(<alpha-value> * 100%), transparent)",
+  "header-view-light":
+    "color-mix(in srgb, rgba(var(--color-headerView-light)) calc(<alpha-value> * 100%), transparent)",
+  "tooltip-light":
+    "color-mix(in srgb, rgba(var(--color-tooltip-light)) calc(<alpha-value> * 100%), transparent)",
   "under-window-background-light":
-    "rgba(var(--color-underWindowBackground-light))",
+    "color-mix(in srgb, rgba(var(--color-underWindowBackground-light)) calc(<alpha-value> * 100%), transparent)",
   "red-dark": "rgb(var(--color-red-dark) / <alpha-value>)",
   "orange-dark": "rgb(var(--color-orange-dark) / <alpha-value>)",
   "yellow-dark": "rgb(var(--color-yellow-dark) / <alpha-value>)",
@@ -290,11 +335,16 @@ const configColors = {
   "pink-dark": "rgb(var(--color-pink-dark) / <alpha-value>)",
   "brown-dark": "rgb(var(--color-brown-dark) / <alpha-value>)",
   "gray-dark": "rgb(var(--color-gray-dark) / <alpha-value>)",
-  "fill-dark": "rgba(var(--color-fill-dark))",
-  "fill-secondary-dark": "rgba(var(--color-fillSecondary-dark))",
-  "fill-tertiary-dark": "rgba(var(--color-fillTertiary-dark))",
-  "fill-quaternary-dark": "rgba(var(--color-fillQuaternary-dark))",
-  "fill-quinary-dark": "rgba(var(--color-fillQuinary-dark))",
+  "fill-dark":
+    "color-mix(in srgb, rgba(var(--color-fill-dark)) calc(<alpha-value> * 100%), transparent)",
+  "fill-secondary-dark":
+    "color-mix(in srgb, rgba(var(--color-fillSecondary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "fill-tertiary-dark":
+    "color-mix(in srgb, rgba(var(--color-fillTertiary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quaternary-dark":
+    "color-mix(in srgb, rgba(var(--color-fillQuaternary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "fill-quinary-dark":
+    "color-mix(in srgb, rgba(var(--color-fillQuinary-dark)) calc(<alpha-value> * 100%), transparent)",
   "fill-vibrant-dark": "rgb(var(--color-fillVibrant-dark) / <alpha-value>)",
   "fill-vibrant-secondary-dark":
     "rgb(var(--color-fillVibrantSecondary-dark) / <alpha-value>)",
@@ -304,11 +354,16 @@ const configColors = {
     "rgb(var(--color-fillVibrantQuaternary-dark) / <alpha-value>)",
   "fill-vibrant-quinary-dark":
     "rgb(var(--color-fillVibrantQuinary-dark) / <alpha-value>)",
-  "text-dark": "rgba(var(--color-text-dark))",
-  "text-secondary-dark": "rgba(var(--color-textSecondary-dark))",
-  "text-tertiary-dark": "rgba(var(--color-textTertiary-dark))",
-  "text-quaternary-dark": "rgba(var(--color-textQuaternary-dark))",
-  "text-quinary-dark": "rgba(var(--color-textQuinary-dark))",
+  "text-dark":
+    "color-mix(in srgb, rgba(var(--color-text-dark)) calc(<alpha-value> * 100%), transparent)",
+  "text-secondary-dark":
+    "color-mix(in srgb, rgba(var(--color-textSecondary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "text-tertiary-dark":
+    "color-mix(in srgb, rgba(var(--color-textTertiary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "text-quaternary-dark":
+    "color-mix(in srgb, rgba(var(--color-textQuaternary-dark)) calc(<alpha-value> * 100%), transparent)",
+  "text-quinary-dark":
+    "color-mix(in srgb, rgba(var(--color-textQuinary-dark)) calc(<alpha-value> * 100%), transparent)",
   "text-vibrant-dark": "rgb(var(--color-textVibrant-dark) / <alpha-value>)",
   "text-vibrant-secondary-dark":
     "rgb(var(--color-textVibrantSecondary-dark) / <alpha-value>)",
@@ -318,29 +373,44 @@ const configColors = {
     "rgb(var(--color-textVibrantQuaternary-dark) / <alpha-value>)",
   "text-vibrant-quinary-dark":
     "rgb(var(--color-textVibrantQuinary-dark) / <alpha-value>)",
-  "material-ultra-thick-dark": "rgba(var(--color-materialUltraThick-dark))",
-  "material-thick-dark": "rgba(var(--color-materialThick-dark))",
-  "material-medium-dark": "rgba(var(--color-materialMedium-dark))",
-  "material-thin-dark": "rgba(var(--color-materialThin-dark))",
-  "material-ultra-thin-dark": "rgba(var(--color-materialUltraThin-dark))",
+  "material-ultra-thick-dark":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThick-dark)) calc(<alpha-value> * 100%), transparent)",
+  "material-thick-dark":
+    "color-mix(in srgb, rgba(var(--color-materialThick-dark)) calc(<alpha-value> * 100%), transparent)",
+  "material-medium-dark":
+    "color-mix(in srgb, rgba(var(--color-materialMedium-dark)) calc(<alpha-value> * 100%), transparent)",
+  "material-thin-dark":
+    "color-mix(in srgb, rgba(var(--color-materialThin-dark)) calc(<alpha-value> * 100%), transparent)",
+  "material-ultra-thin-dark":
+    "color-mix(in srgb, rgba(var(--color-materialUltraThin-dark)) calc(<alpha-value> * 100%), transparent)",
   "material-opaque-dark":
     "rgb(var(--color-materialOpaque-dark) / <alpha-value>)",
-  "control-enabled-dark": "rgba(var(--color-controlEnabled-dark))",
-  "control-disabled-dark": "rgba(var(--color-controlDisabled-dark))",
-  "menu-dark": "rgba(var(--color-menu-dark))",
-  "popover-dark": "rgba(var(--color-popover-dark))",
-  "titlebar-dark": "rgba(var(--color-titlebar-dark))",
-  "sidebar-dark": "rgba(var(--color-sidebar-dark))",
-  "selection-focused-dark": "rgba(var(--color-selectionFocused-dark))",
+  "control-enabled-dark":
+    "color-mix(in srgb, rgba(var(--color-controlEnabled-dark)) calc(<alpha-value> * 100%), transparent)",
+  "control-disabled-dark":
+    "color-mix(in srgb, rgba(var(--color-controlDisabled-dark)) calc(<alpha-value> * 100%), transparent)",
+  "menu-dark":
+    "color-mix(in srgb, rgba(var(--color-menu-dark)) calc(<alpha-value> * 100%), transparent)",
+  "popover-dark":
+    "color-mix(in srgb, rgba(var(--color-popover-dark)) calc(<alpha-value> * 100%), transparent)",
+  "titlebar-dark":
+    "color-mix(in srgb, rgba(var(--color-titlebar-dark)) calc(<alpha-value> * 100%), transparent)",
+  "sidebar-dark":
+    "color-mix(in srgb, rgba(var(--color-sidebar-dark)) calc(<alpha-value> * 100%), transparent)",
+  "selection-focused-dark":
+    "color-mix(in srgb, rgba(var(--color-selectionFocused-dark)) calc(<alpha-value> * 100%), transparent)",
   "selection-focused-fill-dark":
     "rgb(var(--color-selectionFocusedFill-dark) / <alpha-value>)",
-  "selection-unfocused-dark": "rgba(var(--color-selectionUnfocused-dark))",
+  "selection-unfocused-dark":
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocused-dark)) calc(<alpha-value> * 100%), transparent)",
   "selection-unfocused-fill-dark":
-    "rgba(var(--color-selectionUnfocusedFill-dark))",
-  "header-view-dark": "rgba(var(--color-headerView-dark))",
-  "tooltip-dark": "rgba(var(--color-tooltip-dark))",
+    "color-mix(in srgb, rgba(var(--color-selectionUnfocusedFill-dark)) calc(<alpha-value> * 100%), transparent)",
+  "header-view-dark":
+    "color-mix(in srgb, rgba(var(--color-headerView-dark)) calc(<alpha-value> * 100%), transparent)",
+  "tooltip-dark":
+    "color-mix(in srgb, rgba(var(--color-tooltip-dark)) calc(<alpha-value> * 100%), transparent)",
   "under-window-background-dark":
-    "rgba(var(--color-underWindowBackground-dark))",
+    "color-mix(in srgb, rgba(var(--color-underWindowBackground-dark)) calc(<alpha-value> * 100%), transparent)",
 };
 
 export const withUIKit = (config: Config) => {

@@ -98,13 +98,14 @@ export { configColors as colors }
 /**
  * 根据颜色值生成对应的CSS变量引用
  * 对于支持alpha的颜色，使用 rgb(var(--color-xxx) / <alpha-value>)
- * 对于已包含透明度的颜色，使用 rgba(var(--color-xxx))
+ * 对于已包含透明度的颜色，使用 color-mix() 实现 alpha 值支持
  */
 function generateCssVarReference(colorKey: string, colorValue: string): string {
   if (supportsAlpha(colorValue)) {
     return `rgb(var(--color-${colorKey}) / <alpha-value>)`
   } else {
-    return `rgba(var(--color-${colorKey}))`
+    // 使用 color-mix() 为已有透明度的颜色添加 alpha 值支持
+    return `color-mix(in srgb, rgba(var(--color-${colorKey})) calc(<alpha-value> * 100%), transparent)`
   }
 }
 
@@ -221,7 +222,7 @@ function generateFixedColorConfig(
     const kebabKey = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     fixedColors[`${kebabKey}-light`] = supportsAlpha(value)
       ? `rgb(var(--color-${key}-light) / <alpha-value>)`
-      : `rgba(var(--color-${key}-light))`
+      : `color-mix(in srgb, rgba(var(--color-${key}-light)) calc(<alpha-value> * 100%), transparent)`
   }
 
   // 添加固定的深色主题变量
@@ -229,7 +230,7 @@ function generateFixedColorConfig(
     const kebabKey = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     fixedColors[`${kebabKey}-dark`] = supportsAlpha(value)
       ? `rgb(var(--color-${key}-dark) / <alpha-value>)`
-      : `rgba(var(--color-${key}-dark))`
+      : `color-mix(in srgb, rgba(var(--color-${key}-dark)) calc(<alpha-value> * 100%), transparent)`
   }
 
   return fixedColors

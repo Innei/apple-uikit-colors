@@ -164,9 +164,11 @@ const configColors = {
     DEFAULT: "rgb(var(--color-gray) / <alpha-value>)",
   },
   "placeholder-text": "rgb(var(--color-placeholderText) / <alpha-value>)",
-  separator: "rgba(var(--color-separator))",
+  separator:
+    "color-mix(in srgb, rgba(var(--color-separator)) calc(<alpha-value> * 100%), transparent)",
   "opaque-separator": "rgb(var(--color-opaqueSeparator) / <alpha-value>)",
-  "non-opaque-separator": "rgba(var(--color-nonOpaqueSeparator))",
+  "non-opaque-separator":
+    "color-mix(in srgb, rgba(var(--color-nonOpaqueSeparator)) calc(<alpha-value> * 100%), transparent)",
   link: "rgb(var(--color-link) / <alpha-value>)",
   "system-background": "rgb(var(--color-systemBackground) / <alpha-value>)",
   "secondary-system-background":
@@ -179,15 +181,22 @@ const configColors = {
     "rgb(var(--color-secondarySystemGroupedBackground) / <alpha-value>)",
   "tertiary-system-grouped-background":
     "rgb(var(--color-tertiarySystemGroupedBackground) / <alpha-value>)",
-  "system-fill": "rgba(var(--color-systemFill))",
-  "secondary-system-fill": "rgba(var(--color-secondarySystemFill))",
-  "tertiary-system-fill": "rgba(var(--color-tertiarySystemFill))",
-  "quaternary-system-fill": "rgba(var(--color-quaternarySystemFill))",
+  "system-fill":
+    "color-mix(in srgb, rgba(var(--color-systemFill)) calc(<alpha-value> * 100%), transparent)",
+  "secondary-system-fill":
+    "color-mix(in srgb, rgba(var(--color-secondarySystemFill)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-system-fill":
+    "color-mix(in srgb, rgba(var(--color-tertiarySystemFill)) calc(<alpha-value> * 100%), transparent)",
+  "quaternary-system-fill":
+    "color-mix(in srgb, rgba(var(--color-quaternarySystemFill)) calc(<alpha-value> * 100%), transparent)",
   label: "rgb(var(--color-label) / <alpha-value>)",
   text: "rgb(var(--color-text) / <alpha-value>)",
-  "secondary-label": "rgba(var(--color-secondaryLabel))",
-  "tertiary-label": "rgba(var(--color-tertiaryLabel))",
-  "quaternary-label": "rgba(var(--color-quaternaryLabel))",
+  "secondary-label":
+    "color-mix(in srgb, rgba(var(--color-secondaryLabel)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-label":
+    "color-mix(in srgb, rgba(var(--color-tertiaryLabel)) calc(<alpha-value> * 100%), transparent)",
+  "quaternary-label":
+    "color-mix(in srgb, rgba(var(--color-quaternaryLabel)) calc(<alpha-value> * 100%), transparent)",
   "red-light": "rgb(var(--color-red-light) / <alpha-value>)",
   "orange-light": "rgb(var(--color-orange-light) / <alpha-value>)",
   "yellow-light": "rgb(var(--color-yellow-light) / <alpha-value>)",
@@ -208,10 +217,12 @@ const configColors = {
   "gray6-light": "rgb(var(--color-gray6-light) / <alpha-value>)",
   "placeholder-text-light":
     "rgb(var(--color-placeholderText-light) / <alpha-value>)",
-  "separator-light": "rgba(var(--color-separator-light))",
+  "separator-light":
+    "color-mix(in srgb, rgba(var(--color-separator-light)) calc(<alpha-value> * 100%), transparent)",
   "opaque-separator-light":
     "rgb(var(--color-opaqueSeparator-light) / <alpha-value>)",
-  "non-opaque-separator-light": "rgba(var(--color-nonOpaqueSeparator-light))",
+  "non-opaque-separator-light":
+    "color-mix(in srgb, rgba(var(--color-nonOpaqueSeparator-light)) calc(<alpha-value> * 100%), transparent)",
   "link-light": "rgb(var(--color-link-light) / <alpha-value>)",
   "system-background-light":
     "rgb(var(--color-systemBackground-light) / <alpha-value>)",
@@ -225,16 +236,22 @@ const configColors = {
     "rgb(var(--color-secondarySystemGroupedBackground-light) / <alpha-value>)",
   "tertiary-system-grouped-background-light":
     "rgb(var(--color-tertiarySystemGroupedBackground-light) / <alpha-value>)",
-  "system-fill-light": "rgba(var(--color-systemFill-light))",
-  "secondary-system-fill-light": "rgba(var(--color-secondarySystemFill-light))",
-  "tertiary-system-fill-light": "rgba(var(--color-tertiarySystemFill-light))",
+  "system-fill-light":
+    "color-mix(in srgb, rgba(var(--color-systemFill-light)) calc(<alpha-value> * 100%), transparent)",
+  "secondary-system-fill-light":
+    "color-mix(in srgb, rgba(var(--color-secondarySystemFill-light)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-system-fill-light":
+    "color-mix(in srgb, rgba(var(--color-tertiarySystemFill-light)) calc(<alpha-value> * 100%), transparent)",
   "quaternary-system-fill-light":
-    "rgba(var(--color-quaternarySystemFill-light))",
+    "color-mix(in srgb, rgba(var(--color-quaternarySystemFill-light)) calc(<alpha-value> * 100%), transparent)",
   "label-light": "rgb(var(--color-label-light) / <alpha-value>)",
   "text-light": "rgb(var(--color-text-light) / <alpha-value>)",
-  "secondary-label-light": "rgba(var(--color-secondaryLabel-light))",
-  "tertiary-label-light": "rgba(var(--color-tertiaryLabel-light))",
-  "quaternary-label-light": "rgba(var(--color-quaternaryLabel-light))",
+  "secondary-label-light":
+    "color-mix(in srgb, rgba(var(--color-secondaryLabel-light)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-label-light":
+    "color-mix(in srgb, rgba(var(--color-tertiaryLabel-light)) calc(<alpha-value> * 100%), transparent)",
+  "quaternary-label-light":
+    "color-mix(in srgb, rgba(var(--color-quaternaryLabel-light)) calc(<alpha-value> * 100%), transparent)",
   "red-dark": "rgb(var(--color-red-dark) / <alpha-value>)",
   "orange-dark": "rgb(var(--color-orange-dark) / <alpha-value>)",
   "yellow-dark": "rgb(var(--color-yellow-dark) / <alpha-value>)",
@@ -255,10 +272,12 @@ const configColors = {
   "gray6-dark": "rgb(var(--color-gray6-dark) / <alpha-value>)",
   "placeholder-text-dark":
     "rgb(var(--color-placeholderText-dark) / <alpha-value>)",
-  "separator-dark": "rgba(var(--color-separator-dark))",
+  "separator-dark":
+    "color-mix(in srgb, rgba(var(--color-separator-dark)) calc(<alpha-value> * 100%), transparent)",
   "opaque-separator-dark":
     "rgb(var(--color-opaqueSeparator-dark) / <alpha-value>)",
-  "non-opaque-separator-dark": "rgba(var(--color-nonOpaqueSeparator-dark))",
+  "non-opaque-separator-dark":
+    "color-mix(in srgb, rgba(var(--color-nonOpaqueSeparator-dark)) calc(<alpha-value> * 100%), transparent)",
   "link-dark": "rgb(var(--color-link-dark) / <alpha-value>)",
   "system-background-dark":
     "rgb(var(--color-systemBackground-dark) / <alpha-value>)",
@@ -272,15 +291,22 @@ const configColors = {
     "rgb(var(--color-secondarySystemGroupedBackground-dark) / <alpha-value>)",
   "tertiary-system-grouped-background-dark":
     "rgb(var(--color-tertiarySystemGroupedBackground-dark) / <alpha-value>)",
-  "system-fill-dark": "rgba(var(--color-systemFill-dark))",
-  "secondary-system-fill-dark": "rgba(var(--color-secondarySystemFill-dark))",
-  "tertiary-system-fill-dark": "rgba(var(--color-tertiarySystemFill-dark))",
-  "quaternary-system-fill-dark": "rgba(var(--color-quaternarySystemFill-dark))",
+  "system-fill-dark":
+    "color-mix(in srgb, rgba(var(--color-systemFill-dark)) calc(<alpha-value> * 100%), transparent)",
+  "secondary-system-fill-dark":
+    "color-mix(in srgb, rgba(var(--color-secondarySystemFill-dark)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-system-fill-dark":
+    "color-mix(in srgb, rgba(var(--color-tertiarySystemFill-dark)) calc(<alpha-value> * 100%), transparent)",
+  "quaternary-system-fill-dark":
+    "color-mix(in srgb, rgba(var(--color-quaternarySystemFill-dark)) calc(<alpha-value> * 100%), transparent)",
   "label-dark": "rgb(var(--color-label-dark) / <alpha-value>)",
   "text-dark": "rgb(var(--color-text-dark) / <alpha-value>)",
-  "secondary-label-dark": "rgba(var(--color-secondaryLabel-dark))",
-  "tertiary-label-dark": "rgba(var(--color-tertiaryLabel-dark))",
-  "quaternary-label-dark": "rgba(var(--color-quaternaryLabel-dark))",
+  "secondary-label-dark":
+    "color-mix(in srgb, rgba(var(--color-secondaryLabel-dark)) calc(<alpha-value> * 100%), transparent)",
+  "tertiary-label-dark":
+    "color-mix(in srgb, rgba(var(--color-tertiaryLabel-dark)) calc(<alpha-value> * 100%), transparent)",
+  "quaternary-label-dark":
+    "color-mix(in srgb, rgba(var(--color-quaternaryLabel-dark)) calc(<alpha-value> * 100%), transparent)",
 };
 
 export const withUIKit = (config: Config) => {
